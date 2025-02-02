@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    z-index: 1;
+}
+
+#logo {
+    width: 70px;
+    height: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    z-index: 2; /* Garante que o header esteja acima de outros elementos */
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#ini {
+    color: #E86666;
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 40%; /* Espaçamento entre a logo e os menus */
+}
+
+.lista {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 40px;
+    margin-top: 10px;
+}
+
+.lista {
+    margin-left: 30px;
+    color: black;
+}
+
+.lista:last-child {
+    margin-right: 0;
+}
+
+.lista:hover {
+    transform: scale(1.02);
+    text-decoration: underline;
+    transition: 0.2s;
+    color: #E86666;
+}
+
+#menu-button {
+    display: none; /* Esconde o botão por padrão */
+}
+
+
+
+/* Responsividade */
+@media only screen and (max-width: 1024px) {
+    li{
+        width: 120px;
+    }
+    
+    .lista{
+        font-size: 16px;
+        font-size: 14px;
+    }
+    
+    nav{
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Cor do overlay */
+        z-index: 999; /* Garante que o overlay fique acima de outros elementos */
+    }
+    
+    /* Estilo para a barra lateral */
+    #nav {
+        position: fixed;
+        top: 0;
+        left: 750px; /* Inicialmente esconde a barra lateral */
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+    
+    #nav.open {
+        left: calc(100% - 270px); /* Mostra a barra lateral ao adicionar a classe "open" */
+    }
+    
+
+    #menu-button {
+        display: block; /* Mostra o botão em telas menores */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -250px; /* Inicialmente fora da tela */
+        height: 100%;
+        width: 200px;
+        background-color: white;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    nav.open {
+        left: 0;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    .lista {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    a{
+        margin-left: 40%;
+    }
+
+    #nav ul {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 344px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Cor do overlay */
+        z-index: 999; /* Garante que o overlay fique acima de outros elementos */
+    }
+    
+    /* Estilo para a barra lateral */
+    #nav {
+        position: fixed;
+        top: 0;
+        left: 100%; /* Inicialmente esconde a barra lateral fora da tela */
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+    
+    #nav.open {
+        left: calc(100% - 270px); /* Mostra a barra lateral ao adicionar a classe "open" */
+    }
+    
+    #menu-button {
+        display: block; /* Mostra o botão em telas menores */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100px; /* Inicialmente fora da tela */
+        height: 100%;
+        width: 200px;
+        background-color: white;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    nav.open {
+        left: 0;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    .lista {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    a {
+        margin-left: 40%;
+    }
+
+    #nav ul {
+        padding-top: 60px; /* Ajuste para alinhar os itens da lista no topo */
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Cor do overlay */
+        z-index: 999; /* Garante que o overlay fique acima de outros elementos */
+    }
+    
+    /* Estilo para a barra lateral */
+    #nav {
+        position: fixed;
+        top: 0;
+        left: 100%; /* Inicialmente esconde a barra lateral fora da tela */
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+    
+    #nav.open {
+        left: calc(100% - 350px); /* Mostra a barra lateral ao adicionar a classe "open" */
+    }
+    
+    #menu-button {
+        display: block; /* Mostra o botão em telas menores */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -200px; /* Inicialmente fora da tela */
+        height: 100%;
+        width: 200px;
+        background-color: white;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    nav.open {
+        left: 100;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    .lista {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    a {
+        margin-left: 40%;
+    }
+
+    #nav ul {
+        padding-top: 60px; /* Ajuste para alinhar os itens da lista no topo */
+    }
+}
+

@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#beneficios {
+    text-align: center;
+    width: 100%;
+    color: #E86666;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.beneficio {
+    color: white;
+    padding: 0;
+    width: 33.3%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.beneficio img, .beneficio h2, .beneficio p {
+    transition: transform 0.3s;
+}
+
+.beneficio:hover img, .beneficio:hover h2, .beneficio:hover p {
+    transform: scale(1.05);
+}
+
+.beneficio img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 10%;
+}
+
+.beneficio h2 {
+    color: white;
+    margin-top: 5%;
+    width: 80%;
+}
+
+.beneficio p {
+    color: white;
+    margin-top: 10%;
+    width: 80%;
+}
+
+#bw1 {
+    background-color: #E86666;
+}
+
+#bw1 h2, #bw1 p {
+    color: white;
+    margin-bottom: 7%;
+}
+
+#bw2 {
+    background-color: white;
+}
+
+#bw2 h2, #bw2 p {
+    color: #E86666;
+    margin-bottom: 16.4%;
+}
+
+#bw3 {
+    background-color: #E86666;
+}
+
+#bw3 h2, #bw3 p {
+    color: white;
+    margin-bottom: 16.4%;
+}
+
+/* Estilos específicos para telas menores */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .beneficio {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .beneficio img {
+        width: 80%;
+    }
+
+    .beneficio h2, .beneficio p {
+        width: 90%;
+    }
+}
+#como-adquirir {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#como-adquirir h2 {
+    color: #E86666;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+#como-adquirir p {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+#botao-download {
+    padding: 10px 20px;
+    background-color: #E86666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#botao-download:hover {
+    background-color: #c75454;
+}
+
+/* Estilos para dispositivos menores */
+@media only screen and (max-width: 768px) {
+    #como-adquirir p {
+        width: 90%;
+    }
+
+    #como-adquirir h2 {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/contato.css">
+    <link rel="shortcut icon" href="IMG/Design-sem-nome-_6_.ico" type="image/x-icon">
+    <title>HelpLine - Contato</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="IMG/Design sem nome (6).png" alt="HelpLine" id="logo"></a>
+        <button id="menu-button">☰</button>
+        
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html" class="lista">INÍCIO</a></li>
+                <li><a href="pemp.html" class="lista">PARA SUA EMPRESA</a></li>
+                <li><a href="pvc.html" class="lista">PARA VOCÊ</a></li>
+                <li><a href="sobre.html" class="lista">SOBRE</a></li>
+                <li><a href="contato.html" class="lista" id="ini">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="contato">
+            <h1>Entre em Contato Conosco</h1>
+            <p>Estamos aqui para ajudar. Preencha o formulário abaixo para enviar uma mensagem:</p>
+            <div class="form-container">
+                <form action="mailto:helplinebizz@gmail.com" method="post" enctype="text/plain">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div id="plataformas">
+            <div class="contato-item">
+                <a href="https://www.linkedin.com/company/helplineapp/" target="_blank" class="link">
+                    <img src="IMG/linkedin-icon.png" alt="LinkedIn" class="social-icon">
+                </a>
+            </div>
+            <div class="contato-item">
+                <a href="https://www.instagram.com/apphelpline?igsh=a29qOW55amplNHg4" target="_blank" class="link">
+                    <img src="IMG/instagram-icon.png" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+            <div class="contato-item">
+                <a href="https://wa.me/message/AFCP2NVH53P2L1" target="_blank" class="link">
+                    <img src="IMG/whatsapp-icon.png" alt="WhatsApp" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </main>
+    <div id="overlay"></div>
+    <script src="JS/menu.js"></script>
+</body>
+</html>

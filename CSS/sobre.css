@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+main {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(70% - 40px); /* Calcula 50% do espaço menos a margem */
+    max-width: 500px; /* Limita a largura máxima */
+}
+
+h2 {
+    font-weight: bold;
+    color: #333;
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+        /* Adicionando animações */
+.container { 
+      transition: transform 0.3s ease-in-out; 
+}
+
+        /* Adicionando animação de escala ao passar o mouse */
+.container:hover {
+    transform: scale(1.05);
+}

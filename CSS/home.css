@@ -1,0 +1,408 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F1EFEF;
+}
+
+main {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+#main {
+    background-color: white;
+    height: 520px;
+}
+
+h1 {
+    margin-left: 50px;
+    max-width: 600px;
+    margin-top: 80px;
+    font-weight: bold;
+    color: black;
+    font-size: 45px;
+}
+
+.colorido {
+    color: #E86666;
+}
+
+main p {
+    display: inline-block;
+    max-width: 600px;
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+#mockup, #mockup2 {
+    position: absolute;
+    width: 200px;
+    height: auto;
+}
+
+#mockup {
+    margin-top: 7%;
+    margin-left: 68%;
+    z-index: 4;
+}
+
+#mockup2 {
+    margin-top: 5%;
+    margin-left: 73%;
+    z-index: 3;
+}
+
+#solucao {
+    background-color: rgb(241, 239, 239);
+    padding-top: 8px;
+}
+
+.espaco {
+    margin: 10px;
+    border-radius: 10px;
+    height: 430px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.espaco:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+#user p, h1 {
+    margin-left: 50%;
+}
+
+#titulo2 {
+    margin-top: 0;
+    margin-left: 50%;
+    font-size: 32px;
+}
+
+#titulo {
+    margin-top: 0px;
+    margin-left: 20px;
+    font-size: 32px;
+}
+
+#titulop {
+    max-width:50;
+    margin-top: 80px;
+    font-weight: bold;
+    color: black;
+    font-size: 45px;
+    margin-left: 4%;
+}
+
+.tipo {
+    margin-top: 20px;
+    border-radius: 30px;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #e9aaaa;
+    padding: 5px;
+    color: rgb(131, 24, 24);
+}
+
+.explicativo {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.botao-arredondado {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 50%;
+    color: #fff;
+    background-color: #E86666;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.botao-arredondado:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: #E86666;
+    transform: scale(1.05);
+    border-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#img_empresas {
+    position: absolute;
+    margin: 0;
+    margin-top: 3%;
+    margin-left: 55%;
+    border-radius: 10px;
+}
+
+#img_usuario {
+    position: absolute;
+    margin: 0;
+    margin-top: 4%;
+    margin-left: 3%;
+    border-radius: 10px;
+}
+
+.popup {
+    display: none; 
+    position: fixed;
+    z-index: 2; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 3px solid #E86666;
+    width: 80%;
+    max-width: 500px; 
+    border-radius: 30px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #E86666;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.scroll-animated {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.scroll-animated.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media only screen and (max-width: 1024px) {
+    #logo {
+        margin: 10px auto;
+    }
+
+    #main {
+        height: auto;
+        width: 600px;
+    }
+
+
+    h1 {
+        margin-left: 5%;
+        font-size: 20px;
+    }
+
+    h2 {
+        margin-left: 40%;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    #titulop {
+        font-size: 25px;
+        width: 100%;
+        margin-left: 20%;
+    }
+
+    main p {
+        margin-left: 20%;
+        font-size: 20px;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    #mockup, #mockup2 {
+        position: static;
+        width: 25%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    #mockup2 {
+        display: none;
+    }
+
+    #solucao {
+        padding-top: 20px;
+        margin-left: 0%;
+    }
+
+    .espaco {
+        margin: 10px 0;
+        width: 80%;
+        margin-left: 5%;
+        height: auto;
+        padding: 20px;
+    }
+
+    #titulo, #titulo2 {
+        margin-left: 0;
+        font-size: 24px;
+    }
+
+    .explicativo {
+        margin-left: 0;
+        width: 600px;
+    }
+
+    #user p, h1, #titulo2 {
+        margin-left: 0;
+    }
+
+    .tipo {
+        margin: 20px 0;
+        width: 80px;
+    }
+
+    .botao-arredondado {
+        margin-left: 0;
+        display: block;
+        width: 60%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    #img_empresas, #img_usuario {
+        position: static;
+        margin: 20px auto;
+        width: 80%;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    #logo {
+        margin: 10px auto;
+    }
+
+    #main {
+        height: auto;
+        width: 220px;
+    }
+
+    h1 {
+        margin-left: 5%;
+        font-size: 20px;
+    }
+
+    h2{
+        margin-left: 40%;
+        width: 300px;
+        font-size: 18px;
+    }
+
+    #titulop{
+        font-size: 20px;
+        width: 300px;
+        margin-left: 10%;
+    }
+
+    main p {
+        margin-left: 10%;
+        font-size: 12px;
+        width: 300px;
+        margin-bottom: 5%;
+    }
+
+    #mockup{
+        position: static;
+        width: 25%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    #mockup2{
+        display: none;
+    }
+
+    #solucao {
+        padding-top: 20px;
+    }
+
+    .espaco {
+        margin: 10px 0;
+        width: 80%;
+        margin-left: 5%;
+        height: auto;
+        padding: 20px;
+    }
+
+    #titulo, #titulo2 {
+        margin-left: 0;
+        font-size: 24px;
+    }
+
+    .explicativo{
+        margin-left: 0;
+        width: 330px;
+    }
+
+    #user p, h1, #titulo2 {
+        margin-left: 0;
+    }
+
+    .tipo {
+        margin: 20px 0;
+        width: 80px;
+    }
+
+    .botao-arredondado {
+        margin-left: 0;
+        display: block;
+        width: 60%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    #img_empresas, #img_usuario {
+        position: static;
+        margin: 20px auto;
+        width: 80%;
+        display: block;
+    }
+}
+
+@media (max-width: 375px) {
+    #main{
+        width: 10%;
+    }
+
+    #titulo, #titulo2{
+        width: 100%;
+    }
+
+    .explicativo{
+        width: 100%;
+    }
+
+}
+

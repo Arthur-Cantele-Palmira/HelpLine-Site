@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+main {
+    margin-bottom: 80px;
+}
+
+#contato {
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#contato h1 {
+    color: #E86666;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contato p {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: inline-block;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    margin: auto;
+    background-color: #f9f7f7;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+}
+
+form label {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 0.5px solid #ccc;
+    border-radius: 20px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #E86666;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form button:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: #E86666;
+    transform: scale(1.01);
+    border-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#plataformas {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#plataformas h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contato-item {
+    display:inline-flex;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 0%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.link {
+    color: #E86666;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1024px) {
+    .form-container {
+        width: 90%;
+    }
+
+    form input, form textarea {
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    #contato h1 {
+        font-size: 24px;
+    }
+
+    #contato p {
+        font-size: 14px;
+    }
+
+    #plataformas {
+        margin-right: 8%;
+    }
+    
+
+    form input, form textarea {
+        width: 95%;
+    }
+
+    form button {
+        width: 95%;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+}
